@@ -32,7 +32,7 @@ function getParts(file, start, end) {
     return parts;
 }
 Promise.all([
-    mergeFiles(getParts("index.pck", 1, 4))
+    mergeFiles(getParts("index.pck", 1, 3))
 ]).then(([pckUrl]) => {
     window.fetch = async function (url, ...args) {
         if (url.endsWith("index.pck")) {
